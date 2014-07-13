@@ -1,6 +1,48 @@
-# Casper
+# Casper Fork
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
+A minimalist fork of the default theme for [Ghost](http://github.com/tryghost/ghost/).
+
+This theme makes a few assumptions on how your blog is configured. For this reason, this theme may not suit everyone's needs.
+
+## Changes
+
+Below is a listing of features that have been removed or modified.
+
+You can view the code changes by going [here](https://github.com/gchan/Casper/compare/TryGhost:master...master).
+
+### Header
+* Open Sans bold font weight reduced from 700 to 600.
+* Removed blog logo and blog cover.
+* Simple blog heading title and blog description.
+
+### Index/Tag (Listing of posts)
+* Date and tags comes after the post title.
+* Removed post excerpts.
+* Removed pagination (assumes you have configured your blog to have '0 posts per page' i.e. no pagination).
+
+### Post/Page
+* Removed blog logo and blog title.
+* Date format changed from `DD MMM YYYY` to `D MMMM YYYY` (for example `09 Sep 2014` is now `9 September 2014`).
+* Post author is incorporated in the blog meta, appearing after the post date and before the tags. The post author links back to the blog home page.
+
+### Footer
+* Minimalist footer `A blog by <a href="{{@blog.url}}">{{@blog.title}}</a>` (assumes your blog title is the author's name).
+* Removed RSS/subscribe link (although still accessible).
+* Remove copyright and reference to Ghost (sorry!).
+* Removed social media icons.
+* Removed author name, bio, location and website.
+
+### Styling and layout (not covered above)
+* Slightly off-centre (margin-left: 10%).
+* Disabled animation of homepage header.
+* Disabled (most) unused CSS rules.
+* Post content links are styled blue.
+* Minified `screen.css` to `screen-min.css` using [clean-css](https://github.com/GoalSmashers/clean-css).
+
+### Assets
+* jQuery removed by disabling `ghost_foot` helper in `default.hbs` (assumes you are not using jQuery). __Note__ the Ghost team may also change the `ghost_foot` behaviour and this may impact your blog.
+* Removed `/js` folder for `fitvid.js` and `index.js`.
+* Removed `/fonts` folder as icons are not used.
 
 ## Copyright & License
 

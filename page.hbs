@@ -7,17 +7,14 @@
 
     <article class="{{post_class}}">
 
-        <header class="post-header">
-            <a class="blog-logo" href="{{@blog.url}}">
-                {{#if @blog.logo}}
-                    <img src="{{@blog.logo}}" alt="Blog Logo" />
-                {{else}}
-                    <span class="blog-title">{{@blog.title}}</span>
-                {{/if}}
-            </a>
-        </header>
-
+        {{! Everything inside the #post tags pulls data from the post }}
         {{#post}}
+
+            <span class="post-meta">
+                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='D MMMM YYYY'}}</time> /
+                <a href="{{@blog.url}}" class="blog-url">{{author}}</a>
+                {{tags prefix="on " separator=" | "}}
+            </span>
 
             <h1 class="post-title">{{{title}}}</h1>
 

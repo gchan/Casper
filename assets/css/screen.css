@@ -104,7 +104,7 @@ table { border-collapse: collapse; border-spacing: 0; }
    ========================================================================== */
 
 /* Import the font file with the icons in it */
-@font-face {
+/*@font-face {
     font-family: 'icons';
     src:url('../fonts/icons.eot');
     src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
@@ -113,10 +113,10 @@ table { border-collapse: collapse; border-spacing: 0; }
         url('../fonts/icons.svg#icons') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
 /* Apply these base styles to all icons */
-.icon-ghost:before,
+/*.icon-ghost:before,
 .icon-feed:before,
 .icon-twitter:before,
 .icon-google-plus:before,
@@ -131,11 +131,11 @@ table { border-collapse: collapse; border-spacing: 0; }
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
+}*/
 
 /* Each icon is created by inserting the correct character into the
    content of the :before pseudo element. Like a boss. */
-.icon-ghost:before {
+/*.icon-ghost:before {
     content: "\e000";
 }
 .icon-feed:before {
@@ -150,7 +150,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 }
 .icon-facebook:before {
     content: "\e004";
-}
+}*/
 
 
 /* ==========================================================================
@@ -435,6 +435,7 @@ margin on the iframe, cause it breaks stuff. */
     width: 80%;
     max-width: 700px;
     margin: 0 auto;
+    margin-left: 10%;
 }
 
 /* Centres vertically yo. (IE8+) */
@@ -453,19 +454,26 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     display: table;
     width: 100%;
+    /*
     height: 60%;
     margin-bottom: 5rem;
     text-align: center;
     color: #fff;
     background: #303538 no-repeat center center;
+    */
+    margin-top: 5rem;
+    margin-bottom: 7rem;
     background-size: cover;
 }
 
+/*
 .blog-logo {
     text-decoration: none;
 }
+*/
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
+/*
 .blog-logo img {
     display: block;
     max-height: 100px;
@@ -473,6 +481,7 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0 auto;
     line-height: 0;
 }
+*/
 
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
@@ -481,7 +490,12 @@ margin on the iframe, cause it breaks stuff. */
     letter-spacing: -1px;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+    /*text-shadow: 0 1px 6px rgba(0,0,0,0.1);*/
+}
+
+.blog-title a {
+    text-decoration: none;
+    color: #4a4a4a;
 }
 
 .blog-description {
@@ -491,10 +505,11 @@ margin on the iframe, cause it breaks stuff. */
     font-weight: 300;
     font-family: 'Noto Serif', serif;
     letter-spacing: 0;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    /*text-shadow: 0 1px 3px rgba(0,0,0,0.15);*/
 }
 
 /* Add subtle load-in animation for content on the home page */
+/*
 .home-template .site-head {
     -webkit-animation: fade-in-down-subtle 2s;
     animation: fade-in-down-subtle 2s;
@@ -521,22 +536,26 @@ margin on the iframe, cause it breaks stuff. */
     -webkit-animation: fade-in-up-subtle 2s;
     animation: fade-in-up-subtle 2s;
 }
+*/
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
     width:80%;
-    max-width: 700px;
+    max-width: 800px;
     margin: 4rem auto;
+    margin-left: 10%;
+    /*
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
+    */
     word-break: break-word;
     hyphens: auto;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
-.post:after {
+/*.post:after {
     display: block;
     content: "";
     width: 7px;
@@ -552,7 +571,7 @@ margin on the iframe, cause it breaks stuff. */
     border-radius: 100%;
     box-shadow: #fff 0 0 0 5px;
 }
-
+*/
 .post-title {
     margin:0;
     color: #222;
@@ -590,6 +609,11 @@ margin on the iframe, cause it breaks stuff. */
     text-decoration: underline;
 }
 
+.post-meta a.blog-url {
+    color: #57A3E8;
+}
+
+/*
 .user-meta {
     position: relative;
     padding: 0.3rem 40px 0 100px;
@@ -632,6 +656,7 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 1.4rem;
     line-height: 1.5em;
 }
+*/
 
 /* ==========================================================================
    5. Single Post - When you click on an individual post
@@ -645,7 +670,7 @@ margin on the iframe, cause it breaks stuff. */
 
 /* Tweak the .post wrapper style */
 .post-template .post {
-    margin-top: 0;
+    margin-top: 2rem;
     border-bottom: none;
     padding-bottom: 0;
 }
@@ -664,6 +689,15 @@ margin on the iframe, cause it breaks stuff. */
 .post-template .blog-title {
     display: inline-block;
     padding: 2.5rem 0;
+}
+
+.post-content a {
+    color: #57A3E8;
+    text-decoration: none;
+}
+
+.post-content a:hover {
+    text-decoration: underline;
 }
 
 /* Keep images centred and within the bounds of the post-width */
@@ -770,6 +804,7 @@ margin on the iframe, cause it breaks stuff. */
    6. Tag archive
    ========================================================================== */
 
+/*
 .tag-archive-header {
     position: relative;
     max-width: 700px;
@@ -796,7 +831,7 @@ margin on the iframe, cause it breaks stuff. */
     border-radius: 100%;
     box-shadow: #fff 0 0 0 5px;
 }
-
+/*
 
 /* ==========================================================================
    7. Third Party Elements - Embeds from other services
@@ -820,6 +855,7 @@ margin on the iframe, cause it breaks stuff. */
    ========================================================================== */
 
 /* The main wrapper for our pagination links */
+/*
 .pagination {
     position: relative;
     width: 80%;
@@ -834,8 +870,10 @@ margin on the iframe, cause it breaks stuff. */
 .pagination a {
     color: #9EABB3;
 }
+*/
 
 /* Push the previous/next links out to the left/right */
+/*
 .older-posts,
 .newer-posts {
     position: absolute;
@@ -864,7 +902,7 @@ margin on the iframe, cause it breaks stuff. */
 .newer-posts:hover {
     border-color: #9EABB3;
 }
-
+*/
 
 /* ==========================================================================
    9. Footer - The bottom of every page
@@ -872,26 +910,28 @@ margin on the iframe, cause it breaks stuff. */
 
 .site-footer {
     position: relative;
-    margin: 8rem 0 0 0;
+    /*margin: 8rem 0 0 0;*/
     padding: 4rem 0;
-    border-top: #EBF2F6 1px solid;
+    /*border-top: #EBF2F6 1px solid;*/
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     line-height: 1.7em;
     color: #BBC7CC;
-    text-align: center;
-    background: #F7FAFB;
+    /*text-align: center;*/
+    /*background: #F7FAFB;*/
 }
 
 .site-footer a {
-    color: #BBC7CC;
-    text-decoration: underline;
+    color: #57A3E8; /*#BBC7CC;*/
+    text-decoration: none;
 }
 
 .site-footer a:hover {
-    color: #50585D;
+    /*color: #50585D;*/
+    text-decoration: underline;
 }
 
+/*
 .poweredby .icon-ghost {
     font-weight: 700;
     text-decoration: none;
@@ -905,8 +945,10 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 1rem;
     margin-right: 0.2em;
 }
+*/
 
 /* The subscribe icon on the footer */
+/*
 .subscribe {
     width: 28px;
     height: 28px;
@@ -921,8 +963,10 @@ margin on the iframe, cause it breaks stuff. */
     background: #fff;
     transition: box-shadow 0.5s;
 }
+*/
 
 /* The RSS icon, inserted via icon font */
+/*
 .subscribe:before {
     color: #D2DEE3;
     font-size: 10px;
@@ -932,18 +976,24 @@ margin on the iframe, cause it breaks stuff. */
     font-weight: bold;
     transition: color 0.5s ease;
 }
+*/
 
 /* Add a box shadow to on hover */
+/*
 .subscribe:hover {
     box-shadow: rgba(0,0,0,0.05) 0 0 0 3px;
     transition: box-shadow 0.25s;
 }
+*/
 
+/*
 .subscribe:hover:before {
     color: #50585D;
 }
+*/
 
 /* CSS tooltip saying "Subscribe!" - initially hidden */
+/*
 .tooltip {
     opacity:0;
     display: inline-block;
@@ -960,8 +1010,10 @@ margin on the iframe, cause it breaks stuff. */
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     transition: opacity 0.3s ease, top 0.3s ease;
 }
+*/
 
 /* The little chiclet arrow under the tooltip, pointing down */
+/*
 .tooltip:after {
     content:"";
     border-width:5px 5px 0 5px;
@@ -975,13 +1027,15 @@ margin on the iframe, cause it breaks stuff. */
     z-index: 220;
     width:0;
 }
+*/
 
 /* On hover, show the tooltip! */
+/*
 .subscribe:hover .tooltip {
     opacity: 1;
     top: -33px;
 }
-
+*/
 
 /* ==========================================================================
    10. Media Queries - Smaller than 900px
@@ -993,13 +1047,19 @@ margin on the iframe, cause it breaks stuff. */
         margin-left: 0;
     }
 
+    .inner {
+        margin-left: auto;
+    }
+
     .site-head {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+        /*
         height: auto;
         min-height: 240px;
         padding: 15% 0;
+        */
     }
 
     .blog-title {
@@ -1015,6 +1075,7 @@ margin on the iframe, cause it breaks stuff. */
     .post {
         font-size: 0.9em;
         line-height: 1.6em;
+        margin-left: auto;
     }
 
     .post-template .post {
@@ -1071,7 +1132,7 @@ margin on the iframe, cause it breaks stuff. */
     }
 
     .site-head {
-        padding: 10% 0;
+        /*padding: 10% 0;*/
     }
 
     .blog-title {
@@ -1178,6 +1239,7 @@ margin on the iframe, cause it breaks stuff. */
    12. Animations
    ========================================================================== */
 
+/*
 @-webkit-keyframes fade-in-down {
     0% {
         opacity: 0;
@@ -1252,7 +1314,7 @@ margin on the iframe, cause it breaks stuff. */
         -webkit-transform: translateY(0);
     }
 }
-
+*/
 
 
 /* ==========================================================================
