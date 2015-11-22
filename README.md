@@ -11,7 +11,6 @@ Below is a listing of features that have been removed or modified.
 You can view the code changes by going [here](https://github.com/gchan/Casper/compare/TryGhost:master...master).
 
 ### Header
-* Open Sans bold font weight reduced from 700 to 600.
 * Removed blog logo and blog cover.
 * Simple blog heading title and blog description.
 
@@ -40,7 +39,6 @@ You can view the code changes by going [here](https://github.com/gchan/Casper/co
 * Minified `screen.css` to `screen-min.css` using [clean-css](https://github.com/GoalSmashers/clean-css).
 
 ### Assets
-* jQuery removed by disabling `ghost_foot` helper in `default.hbs` (assumes you are not using jQuery). __Note__ the Ghost team may also change the `ghost_foot` behaviour and this may impact your blog.
 * Removed `/js` folder for `fitvid.js` and `index.js`.
 * Removed `/fonts` folder as icons are not used.
 
