@@ -26,13 +26,13 @@
     {{! Everything else gets inserted here }}
     {{{body}}}
 
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+
     <footer class="site-footer clearfix">
         <section>A blog by <a href="{{@blog.url}}">{{@blog.title}}</a></section>
+
+        {{! Ghost outputs important scripts and data with this tag }}
+        {{ghost_foot}}
     </footer>
-
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
-
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 </body>
 </html>
